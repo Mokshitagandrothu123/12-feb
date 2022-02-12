@@ -1,0 +1,31 @@
+rawrice=200
+chanadal=100
+wheatflour=50
+sugar=40
+vermicelli=30
+cname=input("enter customer name:")
+cphno=input("enter customer phone number")
+rrq=int(input("enter number of rice packets"))
+cq=int(input("enter number of chana dal packets"))
+wq=int(input("enter number of wheat flour packets"))
+sq=int(input("enter number of sugar packets"))
+vq=int(input("enter number of vermicelli packets"))
+bill=(rawrice*rrq)+(chanadal*cq)+(wheatflour*wq)+(sugar*sq)+(vermicelli*vq)
+if bill>5000:
+    dis=bill*10/100
+    tax=bill*10/100
+elif bill>3000:
+    dis=bill*8/100
+    tax=bill*10/100
+elif bill>2000:
+    dis=bill*5/100
+    tax=bill*8/100
+elif bill>1000:
+    dis=bill*3/100
+    tax=bill*18/100
+else:
+    print("no discount and tax available on this amount")
+    disc=0
+    tax=0
+mainbill=bill-dis+tax
+print("bill amount:",mainbill)
